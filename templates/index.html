@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Quiz Game</h1>
+
+    <div id="quiz-box">
+        <h2 id="question-text">Loading...</h2>
+
+        <div id="choices"></div>
+
+        <button id="next-btn" disabled>Next</button>
+    </div>
+
+    <div id="result-box" class="hidden">
+        <h2>Your Score:</h2>
+        <p id="score-text"></p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
